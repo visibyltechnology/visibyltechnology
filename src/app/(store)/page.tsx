@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import CompanyPeople from "@/components/CompanyPeople";
+import HeroCarousel from "@/components/HeroCarousel";
 import { ArrowRight, ArrowUpRight, Bot, Building2, Code2, GraduationCap, Layers3, PlayCircle, ShieldCheck, ShoppingBag, Sparkles, Workflow, Zap, CheckCircle2 } from "lucide-react";
 
 const products = [
@@ -34,7 +35,8 @@ export default function HomePage(){
      <div className="mt-6 flex flex-wrap gap-3"><a href="#ecosystem" className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-500">Explore products <ArrowRight size={16}/></a><a href={wa("Hello Visibyl Technologies, I would like to discuss a project.")} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/25 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Talk to our team <ArrowUpRight size={16}/></a></div>
     </div>
     <div className="relative">
-     <div className="grid grid-cols-2 gap-2 sm:gap-3">
+     <HeroCarousel />
+     <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
       {products.slice(0,4).map((item,i)=>{const Icon=item.icon;return <Link key={item.name} href={"/products/"+item.slug} className="group relative flex min-h-[108px] items-center gap-3 overflow-hidden rounded-xl border border-white/15 bg-white/[.08] p-3 transition hover:-translate-y-1 hover:border-cyan-200/60 hover:bg-white/[.14] sm:min-h-[126px] sm:p-4"><span className="rounded-lg bg-blue-400/15 p-2.5 text-cyan-200"><Icon size={20}/></span><span className="min-w-0"><span className="block text-sm font-semibold leading-5 text-white">{item.name}</span><span className="mt-1 block text-[11px] leading-4 text-slate-300">{item.type}</span></span><ArrowUpRight size={14} className="absolute right-3 top-3 text-slate-400 transition group-hover:text-white"/></Link>})}
      </div>
      <p className="mt-3 text-center text-[11px] tracking-wide text-blue-100/70">Explore the Visibyl ecosystem</p>
