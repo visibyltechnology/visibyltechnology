@@ -14,11 +14,16 @@ export const metadata: Metadata = {
     template: "%s | Visibyl Technologies",
   },
   description: "Visibyl Technologies builds digital products, business management systems, e-commerce platforms and intelligent automation for growing organisations.",
-  metadataBase: new URL("https://visibyl.biz"),
+  metadataBase: new URL("https://visibyltechnologies.biz"),
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: ["/logo.png"],
+    apple: [{ url: "/logo.png", type: "image/png" }],
+  },
   openGraph: {
     title: "Visibyl Technologies",
     description: "We build the systems that power businesses.",
-    url: "https://visibyl.biz",
+    url: "https://visibyltechnologies.biz",
     siteName: "Visibyl Technologies",
     type: "website",
   },
