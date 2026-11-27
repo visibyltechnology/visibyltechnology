@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 // Added an `isDesktopOnly` flag to cleanly hide the text versions from the mobile menu
-const NAV_LINKS = [
+const NAV_LINKS: { href: string; label: string; badge?: string; isDesktopOnly?: boolean }[] = [
   { href: "/", label: "Home" },
   { href: "/#ecosystem", label: "Products" },
   { href: "/#services", label: "Services" },
