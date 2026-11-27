@@ -8,9 +8,9 @@ import { useEffect, useRef, useState } from "react";
 // Added an `isDesktopOnly` flag to cleanly hide the text versions from the mobile menu
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/#ecosystem", label: "Products" },
+  { href: "/#services", label: "Services" },
   { href: "/about", label: "About" },
-  { href: "/coming-soon", label: "Shop on our marketplace", badge: "New", isDesktopOnly: true },
-  { href: "/coming-soon", label: "Join our academy", isDesktopOnly: true },
 ];
 
 export default function Navbar() {
