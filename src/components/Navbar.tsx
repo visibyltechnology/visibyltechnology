@@ -8,9 +8,11 @@ import { useEffect, useRef, useState } from "react";
 // Added an `isDesktopOnly` flag to cleanly hide the text versions from the mobile menu
 const NAV_LINKS: { href: string; label: string; badge?: string; isDesktopOnly?: boolean }[] = [
   { href: "/", label: "Home" },
-  { href: "/#ecosystem", label: "Products" },
-  { href: "/#services", label: "Services" },
+  { href: "/products", label: "Products" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -219,13 +221,13 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
-                  href="/staff-login"
+                  href="/portals"
                   className="text-xs font-semibold text-slate-500 hover:text-slate-800 px-3 py-2.5 rounded-xl transition-colors"
                 >
-                  Staff Login
+                  Portal Access
                 </Link>
                 <Link
-                  href="/login"
+                  href="/portals"
                   className="inline-flex items-center justify-center text-sm font-semibold bg-slate-900 text-white px-5 py-2.5 rounded-xl transition-all duration-300 hover:bg-[var(--v-blue)] hover:shadow-lg hover:shadow-[var(--v-blue)]/25"
                 >
                   Log In
@@ -322,7 +324,7 @@ export default function Navbar() {
                   Log In
                 </Link>
                 <Link
-                  href="/staff-login"
+                  href="/portals"
                   role="menuitem"
                   tabIndex={mobileOpen ? 0 : -1}
                   className="w-full inline-flex items-center justify-center text-sm font-medium text-slate-500 px-4 py-3 rounded-xl text-center hover:bg-slate-50 hover:text-slate-800"
