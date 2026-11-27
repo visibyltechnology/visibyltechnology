@@ -8,10 +8,14 @@ import { useEffect, useRef, useState } from "react";
 // Added an `isDesktopOnly` flag to cleanly hide the text versions from the mobile menu
 const NAV_LINKS: { href: string; label: string; badge?: string; isDesktopOnly?: boolean }[] = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/#solutions", label: "Solutions", isDesktopOnly: true },
   { href: "/products", label: "Products" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/about", label: "About" },
+  { href: "/news", label: "Blog" },
+  { href: "/careers", label: "Careers" },
+  { href: "/portals", label: "Portals" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -125,17 +129,17 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60 backdrop-blur-md">
+        <div className="hidden lg:flex items-center gap-0.5">
           {NAV_LINKS.map((link) => {
             const active = isActive(link.href);
             return (
               <Link
                 key={link.label}
                 href={link.href}
-                className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`relative px-2.5 py-2 rounded-lg text-[12px] font-semibold transition-all duration-300 ${
                   active
-                    ? "text-slate-900 bg-white shadow-sm"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-white/50"
+                    ? "text-white bg-blue-700 shadow-sm"
+                    : "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
                 }`}
               >
                 {link.label}
