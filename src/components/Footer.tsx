@@ -89,17 +89,23 @@ export default function Footer() {
             <FooterColumn
               title="Ecosystem"
               links={[
-                { label: "Visibyl SmartPay", href: "/coming-soon" },
-                { label: "Tech Academy", href: "/coming-soon" },
+                { label: "All Products", href: "/products" },
+                { label: "Visbuy", href: "/products/visbuy" },
+                { label: "Visara", href: "/products/visara" },
+                { label: "VisPlay", href: "/products/visplay" },
+                { label: "Business Systems", href: "/products/business-management-system" },
               ]}
             />
             <FooterColumn
               title="Company"
               links={[
                 { label: "About Us", href: "/about" },
-                { label: "Contact Support", href: "/contact" },
-                { label: "Privacy Policy", href: "#" },
-                { label: "Terms of Service", href: "#" },
+                { label: "Services", href: "/services" },
+                { label: "Portfolio", href: "/portfolio" },
+                { label: "News & Insights", href: "/news" },
+                { label: "Careers", href: "/careers" },
+                { label: "Contact", href: "/contact" },
+                { label: "Client & Staff Portals", href: "/portals" },
               ]}
             />
           </motion.div>
